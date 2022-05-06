@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.example.testassignment.utils.CustomTextView
+            android:id="@+id/searchError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:includeFontPadding="false"
+            android:text="@string/error_msg"
+            android:textColor="@color/air_orange_dark"
+            android:visibility="gone" />
+
+        <com.example.testassignment.utils.CustomTextView
+            android:id="@+id/searchTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:includeFontPadding="false"
+            android:text="@string/search"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_12ssp"
+            app:font_name="objectiveMedium" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchEditText"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/_5sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_5sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+            app:boxStrokeColor="@color/border_color"
+            app:boxStrokeWidth="@dimen/_1sdp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:backgroundTint="@color/Transparent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:hint="@string/enter_your_string"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/air_awesome_purple_100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/shape_rectangle_purple_lite_round"
+            android:clickable="false"
+            android:fontFamily="@font/objective_regular"
+            android:text="@string/submit_text"
+            android:textAllCaps="false"
+            android:textColor="@color/air_purple"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
